@@ -12,8 +12,8 @@ export default async function AboutPage() {
     <div className="container max-w-6xl py-6 lg:py-10">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-x-4">
-          <h1 className="inline-block font-black text-4xl lg:text-5xl">
-            About Me
+          <h1 className="inline-block font-bold text-3xl lg:text-4xl">
+            Hey I'm Sushmita 👋
           </h1>
         </div>
       </div>
@@ -28,18 +28,65 @@ export default async function AboutPage() {
             {siteConfig.author}
           </h2>
           <p className="text-muted-foreground text-center break-words">
-            Software Developer
+            Full-Stack Web3 Developer
           </p>
         </div>
-        <p className="text-muted-foreground text-lg py-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
-        </p>
+        <div className="flex-1">
+          <p className="text-muted-foreground text-lg py-4">
+            I'm a Full-Stack Web3 Developer, tech explorer, and open source
+            contributor. Currently, I'm part of the RAD (Rapid Application
+            Development) Contractor Team at Consensys where I work on building
+            full-stack dapps using all the web3 products (MetaMask, Infura,
+            Linea, etc) available.
+          </p>
+          <p className="text-muted-foreground text-lg py-2">
+            Tech is my jam, and I'm always scouting for the next cool tool to
+            dive into.
+          </p>
+          <p className="text-muted-foreground text-lg py-2">
+            Here's my{" "}
+            <a
+              href="https://github.com/meowyx"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            .
+          </p>
+          <p className="text-muted-foreground text-lg py-2">
+            Follow me on{" "}
+            <a
+              href="https://twitter.com/me256ow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="underline">X (Twitter)</span>
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://www.linkedin.com/in/sushmitaaar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="underline">LinkedIn.</span>
+            </a>
+          </p>
+          <p className="text-muted-foreground text-lg py-2">
+            Book a call with me{" "}
+            <a
+              href="https://cal.com/meowy/coffee-chat"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here 👈
+            </a>
+            .
+          </p>
+          <p className="text-muted-foreground text-lg py-2">
+            Contact me via email: <a href="mailto:devmeowy@gmail.com">📥</a>
+          </p>
+        </div>
       </div>
     </div>
   );

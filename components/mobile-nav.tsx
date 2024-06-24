@@ -26,7 +26,6 @@ export function MobileNav() {
           href="/"
           className="flex items-center"
         >
-          😺
           {/* <Icons.logo className="mr-2 h-4 w-4" /> */}
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
