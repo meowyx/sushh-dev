@@ -33,7 +33,7 @@ export default async function AboutPage() {
         </div>
         <div className="flex-1">
           <p className="text-muted-foreground text-lg py-4">
-            I'm a Full-Stack Web3 Developer, tech explorer, and open source
+            I&apos;m a Full-Stack Web3 Developer, tech explorer, and open source
             contributor. Currently, I&apos;m part of the RAD (Rapid Application
             Development) Contractor Team at Consensys where I work on building
             full-stack dapps using all the web3 products (MetaMask, Infura,
