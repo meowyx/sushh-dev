@@ -36,7 +36,8 @@ const aboutItems = [
   {
     icon: Code,
     title: "Tech Enthusiast",
-    content: "I love learning new freaky concepts about tech when I've time.",
+    content:
+      "I love learning new fun and new concepts about tech when I've time.",
   },
   {
     icon: Book,
@@ -62,7 +63,7 @@ const aboutItems = [
   {
     icon: Code,
     title: "Currently Learning",
-    content: "How to write fun smart contracts",
+    content: "How to write fun smoll smart contracts and web animation",
   },
 ];
 
