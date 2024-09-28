@@ -1,38 +1,53 @@
-import { buttonVariants } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
-import { cn, sortPosts } from "@/lib/utils";
-import { posts } from "#site/content";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { PostItem } from "@/components/post-item";
+import { Button } from "@/components/ui/button";
+import { sortPosts } from "@/lib/utils";
+import { posts } from "#site/content";
 
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
+
   return (
-    <>
-      <section className="container max-w-4xl py-4 lg:py-8 flex flex-col space-y-4">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+    <div className="min-h-screen bg-background">
+      <section className="container max-w-4xl py-12">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
           Latest Posts
         </h2>
-        <ul className="flex flex-col">
+        <ul className="space-y-8">
           {latestPosts.map(
-            (post) =>
+            (post, index) =>
               post.published && (
                 <li
                   key={post.slug}
-                  className="first:border-t first:border-border"
+                  className="group animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <PostItem
-                    slug={post.slug}
-                    title={post.title}
-                    description={post.description}
-                    date={post.date}
-                    tags={post.tags}
-                  />
+                  <span className="block p-6 bg-card rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl">
+                    <PostItem
+                      slug={post.slug}
+                      title={post.title}
+                      description={post.description}
+                      date={post.date}
+                      tags={post.tags}
+                    />
+                    {/* <div className="mt-4 flex items-center text-primary">
+                      <span className="text-sm font-medium">
+                        View Full Post
+                      </span>
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </div> */}
+                  </span>
                 </li>
               )
           )}
         </ul>
+        <div className="mt-12 text-center">
+          <Button asChild>
+            <Link href="/blog">View all posts</Link>
+          </Button>
+        </div>
       </section>
-    </>
+    </div>
   );
 }

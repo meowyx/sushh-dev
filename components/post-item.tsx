@@ -3,6 +3,7 @@ import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { cn, formatDate } from "@/lib/utils";
 import { Tag } from "./tag";
+import { ArrowRight } from "lucide-react";
 
 interface PostItemProps {
   slug: string;
@@ -44,7 +45,8 @@ export function PostItem({
           href={"/" + slug}
           className={cn(buttonVariants({ variant: "link" }), "py-0")}
         >
-          Read more →
+          <span>Read more</span>
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>
     </article>
