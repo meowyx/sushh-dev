@@ -31,12 +31,6 @@ export default function Home() {
                       date={post.date}
                       tags={post.tags}
                     />
-                    {/* <div className="mt-4 flex items-center text-primary">
-                      <span className="text-sm font-medium">
-                        View Full Post
-                      </span>
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </div> */}
                   </span>
                 </li>
               )

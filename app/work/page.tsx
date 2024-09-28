@@ -181,7 +181,12 @@ export default function WorkPage() {
               <CardTitle className="text-2xl">Full-Stack Web3 DApps</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {["Form-XChange", "Polis", "EventSea"].map((project) => (
+              {[
+                "Form-XChange",
+                "Polis",
+                "EventSea",
+                "create-web3-template",
+              ].map((project) => (
                 <a
                   key={project}
                   href={`https://github.com/Consensys/${project}`}
@@ -200,7 +205,11 @@ export default function WorkPage() {
               <CardTitle className="text-2xl">Templates</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {["Next-MetaMask-Template", "GasAPI-template"].map((template) => (
+              {[
+                "Next-MetaMask-Template",
+                "GasAPI-template",
+                "next-web3-starter",
+              ].map((template) => (
                 <a
                   key={template}
                   href={`https://github.com/Consensys/${template}`}
@@ -211,6 +220,35 @@ export default function WorkPage() {
                   <Github className="mr-2 h-5 w-5" /> {template}
                 </a>
               ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-background/60 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <CardHeader>
+              <CardTitle className="text-2xl flex items-center">
+                <Hammer className="mr-2 h-6 w-6" /> Side Projects
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <a
+                href="https://github.com/meowyx/web3-marketplace-linea"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-primary hover:underline"
+              >
+                <ExternalLink className="mr-2 h-5 w-5" /> Simple Web3
+                Marketplace on Linea
+              </a>
+
+              <a
+                href="https://github.com/meowyx/rad-token"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-primary hover:underline"
+              >
+                <ExternalLink className="mr-2 h-5 w-5" /> Simple ERC-1155
+                Implementation
+              </a>
             </CardContent>
           </Card>
 
@@ -245,24 +283,6 @@ export default function WorkPage() {
               >
                 <Github className="mr-2 h-5 w-5" /> Building Blocks (Chainlink
                 top 40 projects bounty)
-              </a>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-background/60 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <CardHeader>
-              <CardTitle className="text-2xl flex items-center">
-                <Hammer className="mr-2 h-6 w-6" /> Open Source Contributions
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <a
-                href="https://academy.developerdao.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-primary hover:underline"
-              >
-                <ExternalLink className="mr-2 h-5 w-5" /> Developer DAO Academy
               </a>
             </CardContent>
           </Card>

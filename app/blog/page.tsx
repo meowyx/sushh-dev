@@ -1,9 +1,7 @@
-// pages/blog/page.tsx
-
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
-import { Tag as TagIcon, Coffee, BookOpen } from "lucide-react";
+import { Tag as TagIcon, Coffee } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
 import { Metadata } from "next";
@@ -53,48 +51,16 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
         {/* Posts Section */}
         <div className="md:col-span-2 space-y-8">
           {displayPosts?.length > 0 ? (
-            displayPosts.map((post, index) => {
-              const { slug, date, title, description, tags } = post;
-              return (
-                <Card
-                  key={slug}
-                  className={`animate-slideIn animation-delay-${
-                    index + 1
-                  } hover:shadow-lg transition-shadow duration-300 overflow-hidden group`}
-                >
-                  <CardHeader className="bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                    <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
-                      <a href={`/blog/${slug}`} className="flex items-center">
-                        <BookOpen className="mr-2" aria-hidden="true" />
-                        <span>{title}</span>
-                      </a>
-                    </CardTitle>
-                    <p className="text-sm text-muted-foreground">
-                      <time dateTime={date}>
-                        {new Date(date).toLocaleDateString()}
-                      </time>
-                    </p>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="my-4">{description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {(tags || []).map((tag) => (
-                        <span
-                          key={tag}
-                          className="inline-flex items-center bg-secondary text-secondary-foreground rounded-full px-3 py-1 text-sm group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300"
-                        >
-                          <TagIcon
-                            className="w-3 h-3 mr-1"
-                            aria-hidden="true"
-                          />
-                          <span>{tag}</span>
-                        </span>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })
+            displayPosts.map((post) => (
+              <PostItem
+                key={post.slug}
+                slug={post.slug}
+                title={post.title}
+                description={post.description}
+                date={post.date}
+                tags={post.tags}
+              />
+            ))
           ) : (
             <p>Nothing to see here yet</p>
           )}
