@@ -420,7 +420,7 @@ export default function WorkPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="connect" className="mt-6">
+        <TabsContent value="connect" className="mt-6 py-4">
           <Card className="bg-background/60 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <CardHeader>
               <CardTitle className="text-2xl">Connect with Me</CardTitle>
