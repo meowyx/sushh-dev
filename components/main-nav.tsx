@@ -5,6 +5,7 @@ import { Icons } from "./icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { Cat } from "lucide-react";
 
 export function MainNav() {
   const pathname = usePathname();
@@ -12,6 +13,9 @@ export function MainNav() {
     <nav className="flex items-center space-x-4 lg:space-x-6">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         {/* <Icons.logo className="h-6 w-6" /> */}
+
+        <Cat className="w-6 h-6" />
+
         <span className="font-bold">{siteConfig.name}</span>
       </Link>
       <Link
@@ -24,13 +28,13 @@ export function MainNav() {
         Blog
       </Link>
       <Link
-        href="/about"
+        href="/work"
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        About
+        Work
       </Link>
     </nav>
   );
