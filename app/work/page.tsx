@@ -76,7 +76,7 @@ export default function WorkPage() {
         </Avatar>
         <div>
           <h1 className="font-bold text-4xl lg:text-5xl mb-2">
-            Hey, I'm Sushmita 👋
+            Hey, I&apos;m Sushmita 👋
           </h1>
           <p className="text-xl text-muted-foreground">
             Full-Stack Web3 Developer
@@ -110,23 +110,23 @@ export default function WorkPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                I'm part of the RAD (Rapid Application Development) Team at
+                I&apos;m part of the RAD (Rapid Application Development) Team at
                 Consensys, where I mainly focus on building full-stack web3
                 applications, use cases, and content using all the Consensys
                 products available. I work primarily with Nextjs, TypeScript,
                 React, and Solidity. I have over two years of experience in
-                building web3 applications and I'm passionate about learning new
-                technologies.
+                building web3 applications and I&apos;m passionate about
+                learning new technologies.
               </p>
               <p className="text-muted-foreground">
-                I've worked on{" "}
+                I&apos;ve worked on{" "}
                 <a
                   href="https://www.udacity.com/course/blockchain-developer--nd1310"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold hover:underline text-primary"
                 >
-                  Udacity's Blockchain Nanodegree
+                  Udacity&apos;s Blockchain Nanodegree
                 </a>{" "}
                 program and been involved with a web3 DAO where I founded and
                 led two teams focused on education and inclusivity.
